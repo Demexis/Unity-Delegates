@@ -1,0 +1,21 @@
+{
+  "name": "com.demegraunt.unitydelegates",
+  "author":
+  {
+    "name": "Devid Sorochinsky",
+    "url": "https://github.com/Demexis"
+  },
+  "displayName": "Unity Delegates",
+  "description": "UnityEvent-driven architecture implemented through small and simple mono-components.",
+  "unity": "2021.3",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Demexis/Unity-Delegates.git"
+  },
+  "keywords":
+  [
+    "unityevent",
+    "delegates"
+  ]
+}
