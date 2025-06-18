@@ -73,8 +73,14 @@ __3) For more complex logic using conditions (if-else), you can refer to custom 
 
 ## Examples
 __1: Make the sprite used only for work in the editor - invisible in the play mode.__
+
 ![example-disable-sprite-on-awake](https://github.com/user-attachments/assets/5d31c140-92eb-487b-ab2d-a8fa2470bc2e)
 
+__2: Spawn a reward with some chance when the object dies.__
 
+![example-spawn-reward-on-destroy](https://github.com/user-attachments/assets/142f5ffa-90c6-4189-993e-3188cc0f6ec0)
+
+* Note: `SimpleSpawner` is just an example of a simple script for spawning a prefab, it is not in this package, but you can easily write one yourself.
+* Note: `MonoBehaviour.OnDestroy()` is not always guaranteed to be called, and is used in this example to simplify the idea. Remember that `OnDestroy` is also called when changing a scene, exiting a play mode, or removing script in the editor. Usually each project has its own system of spawning/despawning game objects, and in this case, you could write your own delegate script to avoid the shortcomings of `OnDestroy`.
 
 ## Hints
