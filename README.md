@@ -46,6 +46,8 @@ I also hope that, just as with any other programming principles and patterns, yo
 
 ### Installation
 
+> ⚠️ After installation, you may need to restart your project so that you can use `MonoBehaviour` components from this package in the inspector.
+
 Use __ONE__ of two options:
 
 #### a) Package Manager (Recommended)
