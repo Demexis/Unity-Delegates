@@ -28,6 +28,8 @@ Have you ever written scripts like: `DisableSpriteRendererOnAwake.cs`, `SetRawIm
 
 I am not an adherent of DRY (Don't Repeat Yourself), and I am not saying that there must be no repeating code in the project, on the contrary, it is ok. But in many cases you can avoid the accumulation of unnecessary garbage scripts by using `UnityEvent`(-s), to which you can subscribe most of what you may need.
 
+I also hope that, just as with any other programming principles and patterns, you won't blindly attach a given architectural paradigm to everything, but will be able to recognize where it is truly convenient, easy, and appropriate, and where it is worth applying old or other approaches for the sake of optimization or debugging.
+
 ## Table of Contents
 - [Setup](#setup)
 - [Usage](#usage)
