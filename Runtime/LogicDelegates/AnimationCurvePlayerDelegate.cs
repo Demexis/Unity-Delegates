@@ -22,6 +22,12 @@ namespace Demegraunt.Framework {
             IsPlaying = false;
             CurveTimer = 0f;
         }
+
+        public void Restart()
+        {
+            Stop();
+            Play();
+        }
         
         private void Update() {
             if (!IsPlaying) {
