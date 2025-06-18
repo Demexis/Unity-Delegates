@@ -1,4 +1,3 @@
-
 [![GitHub Release](https://img.shields.io/github/v/release/Demexis/Unity-Delegates.svg)](https://github.com/Demexis/Unity-Delegates/releases/latest)
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 # Unity-Delegates
@@ -74,7 +73,7 @@ __3) For more complex logic using conditions (if-else), you can refer to custom 
 
 ## Examples
 __1: Make the sprite used only for work in the editor - invisible in the play mode.__
-
+![example-disable-sprite-on-awake](https://github.com/user-attachments/assets/5d31c140-92eb-487b-ab2d-a8fa2470bc2e)
 
 
 
