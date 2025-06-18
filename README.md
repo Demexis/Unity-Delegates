@@ -34,7 +34,7 @@ This package is a starting point for demonstrating how you can use general purpo
 - [Setup](#setup)
 - [Usage](#usage)
 - [Examples](#examples)
-- [Hints](#hints)
+- [Write Your Own Delegate Script](#write-your-own-delegate-script)
 
 <br>
 
