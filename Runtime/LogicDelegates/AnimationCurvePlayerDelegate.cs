@@ -30,7 +30,7 @@ namespace Demegraunt.Framework {
 
             if (CurveTimer >= CurveTime) {
                 if (!IsLooping) {
-                    IsPlaying = false;
+                    Stop();
                     return;
                 }
                 
