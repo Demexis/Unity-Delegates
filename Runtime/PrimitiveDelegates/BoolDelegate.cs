@@ -24,16 +24,16 @@ namespace Demegraunt.Framework {
             BoolValue = !BoolValue;
         }
 
-        public void SetAndInvokeDelegate(bool value) {
+        public void SetAndTrigger(bool value) {
             BoolValue = value;
-            InvokeDelegate(value);
+            Trigger(value);
         }
         
-        public void InvokeDelegate() {
-            InvokeDelegate(BoolValue);
+        public void Trigger() {
+            Trigger(BoolValue);
         }
         
-        public void InvokeDelegate(bool value) {
+        public void Trigger(bool value) {
             OnTrigger.Invoke(value);
 
             if (value) {
