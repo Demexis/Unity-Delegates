@@ -34,7 +34,7 @@
 - [Настройка](#setup)
 - [Использование](#usage)
 - [Примеры](#examples)
-- [Напишите Свой Скрипт-Делегат](#write-your-own-delegate-script)
+- [Напишите свой скрипт-делегат](#write-your-own-delegate-script)
 
 <br>
 
@@ -78,51 +78,51 @@ __2) Добавьте на игровой объект необходимые к
 __3) Для более сложной логики с использованием условий (if-else), может потребоваться интегрировать кастомный репозиторий с сериализуемыми калбеками, например, вот этот: https://github.com/Siccity/SerializableCallback.git__
 
 ## Примеры
-__1:  Make the sprite used only for work in the editor - invisible in the play mode__
+__1: Сделать спрайт используемый только для работы в редакторе - невидимым во время игры__
 
 ![example-disable-sprite-on-awake](https://github.com/user-attachments/assets/5d31c140-92eb-487b-ab2d-a8fa2470bc2e)
 
 
-__2: Spawn a reward with some chance when the object dies__
+__2: Заспавнить награду с некоторым шансом когда объект умирает__
 
 ![example-spawn-reward-on-destroy](https://github.com/user-attachments/assets/142f5ffa-90c6-4189-993e-3188cc0f6ec0)
 
-* ⚠️ `SimpleSpawner` is just an example of a simple script for spawning a prefab, it is not in this package, but you can easily write one yourself.
-* ⚠️ `MonoBehaviour.OnDestroy()` is not always guaranteed to be called, and is used in this example to simplify the idea. Remember that `OnDestroy` is also called when changing a scene, exiting a play mode, or removing script in the editor. Usually each project has its own system of spawning/despawning game objects, and in this case, you could write your own delegate script to avoid the shortcomings of `OnDestroy`.
+* ⚠️ `SimpleSpawner` всего лишь пример простого скрипта для спавна префаба, этот скрипт не находится в пакете, но вы с лёгкостью можете написать такой сами.
+* ⚠️ `MonoBehaviour.OnDestroy()` не всегда гарантированно вызывается, и используется в данном примере для упрощения самой идеи. Помните, что `OnDestroy` также вызывается при смене сцены, выхода из режима игры (Play Mode), а также при убирании скрипта в редакторе. Обычно каждый проект имеет свою собственную систему для спавна/де-спавна игровых объектов, и в таком случае, можно написать свой скрипт-делегат чтобы нивелировать недостатки `OnDestroy`.
 
 
-__3: A button that plays a sound and redirects to your social networks when clicked__
+__3: Кнопка которая проигрывает звук и перенаправляет на ваши соцсети при нажатии__
 
 ![example-play-audio-and-open-link-on-button-click](https://github.com/user-attachments/assets/0be44fdc-b008-4e82-9d3c-fb01c20daae2)
 
-* ⚠️ `InstantiateSound` is just an example of a simple script for playing an `AudioClip` asset (not included in this package). You can write delegate script for your own audio manager or something similar.
+* ⚠️ `InstantiateSound` всего лишь пример простого скрипта для проигрывания звука (не включен в пакет). Вы можете написать скрипт-делегат для своего аудио-менеджера или чего-то подобного.
 
 
-__4: Flickering sprite with transparency__
+__4: Мерцающий спрайт с прозрачностью__
 
 ![example-flickering-sprite-with-transparency](https://github.com/user-attachments/assets/877b3e0d-7475-49df-998a-7e3e4b999a98)
 
 
-__5: Toggle for visuals and other things__
+__5: Переключатель для визуальных и прочих штучек__
 
 ![example-toggle-for-visuals](https://github.com/user-attachments/assets/1e7e0643-c871-41c4-bebb-22b34fa3601e)
 
 
-## Write Your Own Delegate Script
+## Напишите свой скрипт-делегат
 
-> When creating a game, you may need delegate scripts that allow you to interact with the interface of your systems via `UnityEvent`(-s). Although most likely, you could come up with a general-purpose script that is not related to any systems, or you wanted to make a script that allows you to invoke some algorithm via `UnityEvent` that interacts with existing components from official Unity packages.
+> При создании игры, могут понадобиться скрипты-делегаты которые позволяют взаимодействовать с интерфейсом ваших систем через `UnityEvent`(-ы). Однако, скорее всего, вы могли придумать скрипт общего назначения который не связан ни с какой системой, или вы хотели сделать скрипт который позволяет вызвать исполнение некоторого алгоритма через `UnityEvent` который взаимодействует с существующими компонентами из официальных пакетов Unity.
 
-Either way, here are some useful tips for you:
+В любом случае, вот пара полезных советов:
 
-__1) All public serializable fields must be auto-properties so that they can be accessed and assigned ​​via `UnityEvent`(-s).__
+__1) Все публичные сериализуемые поля должны быть в виде авто-свойств, чтобы к ним можно было обратиться через `UnityEvent`(-ы).__
 ```cs
 [field: SerializeField] public float Speed { get; set; } = 1f;
 ```
-__2) If the `class` is not `abstract`, it should be `sealed`!__
+__2) Если класс (`class`) не является абстрактным (`abstract`), он должен быть запечатан (`sealed`)!__
 
-> ⚠️ In the Unity ecosystem, existing scripts are difficult to rewrite without losing data and method/field references. Don't create inheritance trees where you can safely do without them, even if it requires some code repetition.
+> ⚠️ В экосистеме Unity, существующие скрипты трудно поддаются переписыванию без потери данных и ссылок на методы/поля. Не создавайте лишние деревья наследования там, где можно спокойно обойтись без них, даже если это требует дублирования некоторых фрагментов кода.
 
-__3) If you use a custom package that provides serializable callbacks in Unity (similar to `System.Func<T>`, but with the ability to specify the property/method via the inspector), then you have a great opportunity to separate out pieces of code that might return a value, especially a `bool`.__
+__3) Если вы используете кастомный пакет который предоставляет сериализуемые калбеки в Unity (схожие с `System.Func<T>`, но с возможностью указать свойство/метод через инспектор), тогда есть отличная возможность отделить фрагменты кода которые могут вернуть в дальнейшем используемое значение, например, `bool`.__
 ```cs
 [Serializable]
 public sealed class BoolCallback : SerializableCallback<bool> { }
