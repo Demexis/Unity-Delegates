@@ -128,9 +128,11 @@ __3) If you use a custom package that provides serializable callbacks in Unity (
 ```cs
 [Serializable]
 public sealed class BoolCallback : SerializableCallback<bool> { }
-
+```
+```cs
 public sealed class FuncBoolDelegate : MonoBehaviour {
     [field: SerializeField] public BoolCallback Callback { get; set; } = new();
+
     [field: SerializeField] public UnityEvent<bool> OnTrigger { get; set; } = new();
     [field: SerializeField] public UnityEvent OnTriggerTrue { get; set; } = new();
     [field: SerializeField] public UnityEvent OnTriggerFalse { get; set; } = new();
@@ -147,3 +149,23 @@ public sealed class FuncBoolDelegate : MonoBehaviour {
         }
     }
 ```
+```cs
+public sealed class SimplifiedShop : MonoBehaviour {
+    [field: SerializeField] public int CurrentCurrencyAmount { get; set; }
+    [field: SerializeField] public int ItemCost { get; set; } = 1;
+
+    public bool TryPurchase() {
+        if (CurrentCurrencyAmount >= ItemCost) {
+            CurrentCurrencyAmount -= ItemCost;
+            return true;
+        }
+        return false;
+    }
+
+    public void AddAmount(int amount) {
+        CurrentCurrencyAmount += amount;
+    }
+}
+```
+
+![example-simplified-shop](https://github.com/user-attachments/assets/a8ce15b1-11ca-4971-bc58-3a56abfc275e)
