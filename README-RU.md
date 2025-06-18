@@ -5,7 +5,7 @@
 <table>
   <tr></tr>
   <tr>
-    <td colspan="3">Readme Languages:</td>
+    <td colspan="3">Языки Readme:</td>
   </tr>
   <tr></tr>
   <tr>
@@ -22,43 +22,43 @@
   </tr>
 </table>
 
-This package is a starting point for demonstrating how you can use general purpose `MonoBehaviour` components that use `UnityEvent`(-s) so that you don't have to write separate scripts to perform simple and primitive actions.
+Данный пакет является отправной демонстрацией того, как вы можете использовать `MonoBehaviour` компоненты общего назначения использующие `UnityEvent`-ы для того, чтобы вам не приходилось писать отдельные скрипты для выполнения простецких и примитивных действий.
 
-> Have you ever written scripts like: `DisableSpriteRendererOnAwake.cs`, `SetRawImageColorAlphaWithDelay.cs`? These scripts maybe were used only once in the main menu or somewhere else, but they are still in the project and make code navigation and searching more difficult as their number increases. Previously mentioned scripts work with specific types, and if you need to apply similar logic, for example, not only to sprites, but also to lines, other renderers, or your custom scripts, the number of such scripts will increase, given that it is not always possible to simply specify a base class so that the logic works for all types you work with.
+> Вы когда-нибудь писали скрипты, типа: `DisableSpriteRendererOnAwake.cs`, `SetRawImageColorAlphaWithDelay.cs`? Эти скрипты вполне возможно используются всего лишь один раз в главном меню или где-то ещё, но они всё равно находятся в проекте и усложняют навигацию и поиск в IDE при увеличении их кол-ва. Ранее упомянутые скрипты работают с конкретными типами, и если нужно применить схожую логику, скажем, не только со спрайтами, но также с линиями, другими рендерами, или вашими кастомными скриптами, кол-во подобных скриптов увеличится, учитывая, что не всегда есть возможность просто указать базовый класс для того, чтобы логика срабатывала для всех типов с которыми вы работаете.
 >
-> I am not an adherent of DRY (Don't Repeat Yourself), and I am not saying that there must be no repeating code in the project, on the contrary, it is ok. But in many cases you can avoid the accumulation of unnecessary garbage scripts by using `UnityEvent`(-s), to which you can subscribe most of what you may need.
+> Я не адепт прицнипа DRY (Don't Repeat Yourself), и я не говорю, что в проекте не должно быть повторяющегося кода, напротив, это нормально. Но во многих случаях можно избежать накопления лишних мусорных скриптов, используя `UnityEvent`(-ы), к которым можно подписать большую часть того, что вам может понадобиться.
 >
-> I also hope that, just as with any other programming principles and patterns, you won't blindly attach a given architectural paradigm to everything, but will be able to recognize where it is truly convenient, easy, and appropriate, and where it is worth applying old or other approaches for the sake of optimization or debugging.
+> Надеюсь, что как и с любыми другими принципами и шаблонами в программировании, вы не будете слепо навешивать данную архитектурную парадигму на всё, а сможете осознать, где это удобно, легко, и уместно, а где стоит применить старый или другие подходы в угоду оптимизации или отладки.
 
-## Table of Contents
-- [Setup](#setup)
-- [Usage](#usage)
-- [Examples](#examples)
-- [Write Your Own Delegate Script](#write-your-own-delegate-script)
+## Содержание
+- [Настройка](#setup)
+- [Использование](#usage)
+- [Примеры](#examples)
+- [Напишите свой скрипт-делегат](#write-your-own-delegate-script)
 
 <br>
 
-## Setup
+## Настройка
 
-### Requirements
+### Требования
 
-* Unity 2021.3 or later
+* Unity 2021.3 или позднее
 
-### Installation
+### Установка
 
-> ⚠️ After installation, you may need to restart your project so that you can use `MonoBehaviour` components from this package in the inspector.
+> ⚠️ После установки может потребоваться перезапустить проект для того, чтобы в инспекторе начали показываться компоненты из данного пакета.
 
-Use __ONE__ of two options:
+Используйте __ОДИН__ из двух вариантов:
 
-#### a) Package Manager (Recommended)
-1. Open Package Manager from Window > Package Manager.
-2. Click the "+" button > Add package from git URL.
-3. Enter the following URL:
+#### а) Менеджер пакетов (Рекомендуется)
+1. Откройте Package Manager из Window > Package Manager.
+2. Нажмите на кнопку "+" > Add package from git URL.
+3. Введите в поле этот URL:
 ```
 https://github.com/Demexis/Unity-Delegates.git
 ```
 
-Alternatively, open *Packages/manifest.json* and add the following to the dependencies block:
+Альтернативно, можете открыть *Packages/manifest.json* и добавить туда новую строку в блок "dependencies":
 
 ```json
 {
@@ -68,63 +68,63 @@ Alternatively, open *Packages/manifest.json* and add the following to the depend
 }
 ```
 
-#### b) Unity Package
-Download a unity package from [the latest release](../../releases).
+#### б) Юнити-пакет
+Скачайте юнити-пакет из [последнего релиза](../../releases).
 
-## Usage
+## Использование
 
-__1) Check out the list of existing components with a detailed description on the wiki.__
+__1) Ознакомьтесь со списком уже существующих компонентов с описанием на wiki.__
 
-__2) Add the necessary components to the game object to execute your game logic, link them together via UnityEvent(-s) if needed.__
+__2) Добавьте на игровой объект необходимые компоненты для исполнения вашей игровой логики, свяжите их между собой через UntiyEvent(-ы), если нужно.__
 
-__3) For more complex logic using conditions (if-else), you may need to integrate a custom repository with serializable callbacks, for example, this one: https://github.com/Siccity/SerializableCallback.git__
+__3) Для более сложной логики с использованием условий (if-else), может потребоваться интегрировать кастомный репозиторий с сериализуемыми калбеками, например, вот этот: https://github.com/Siccity/SerializableCallback.git__
 
-## Examples
-__1: Make the sprite used only for work in the editor - invisible in the play mode__
+## Примеры
+__1: Сделать спрайт используемый только для работы в редакторе - невидимым во время игры__
 
 ![example-disable-sprite-on-awake](https://github.com/user-attachments/assets/5d31c140-92eb-487b-ab2d-a8fa2470bc2e)
 
 
-__2: Spawn a reward with some chance when the object dies__
+__2: Заспавнить награду с некоторым шансом когда объект умирает__
 
 ![example-spawn-reward-on-destroy](https://github.com/user-attachments/assets/142f5ffa-90c6-4189-993e-3188cc0f6ec0)
 
-* ⚠️ `SimpleSpawner` is just an example of a simple script for spawning a prefab, it is not in this package, but you can easily write one yourself.
-* ⚠️ `MonoBehaviour.OnDestroy()` is not always guaranteed to be called, and is used in this example to simplify the idea. Remember that `OnDestroy` is also called when changing a scene, exiting a play mode, or removing script in the editor. Usually each project has its own system of spawning/despawning game objects, and in this case, you could write your own delegate script to avoid the shortcomings of `OnDestroy`.
+* ⚠️ `SimpleSpawner` всего лишь пример простого скрипта для спавна префаба, этот скрипт не находится в пакете, но вы с лёгкостью можете написать такой сами.
+* ⚠️ `MonoBehaviour.OnDestroy()` не всегда гарантированно вызывается, и используется в данном примере для упрощения самой идеи. Помните, что `OnDestroy` также вызывается при смене сцены, выхода из режима игры (Play Mode), а также при убирании скрипта в редакторе. Обычно каждый проект имеет свою собственную систему для спавна/де-спавна игровых объектов, и в таком случае, можно написать свой скрипт-делегат чтобы нивелировать недостатки `OnDestroy`.
 
 
-__3: A button that plays a sound and redirects to your social networks when clicked__
+__3: Кнопка которая проигрывает звук и перенаправляет на ваши соцсети при нажатии__
 
 ![example-play-audio-and-open-link-on-button-click](https://github.com/user-attachments/assets/0be44fdc-b008-4e82-9d3c-fb01c20daae2)
 
-* ⚠️ `InstantiateSound` is just an example of a simple script for playing an `AudioClip` asset (not included in this package). You can write delegate script for your own audio manager or something similar.
+* ⚠️ `InstantiateSound` всего лишь пример простого скрипта для проигрывания звука (не включен в пакет). Вы можете написать скрипт-делегат для своего аудио-менеджера или чего-то подобного.
 
 
-__4: Flickering sprite with transparency__
+__4: Мерцающий спрайт с прозрачностью__
 
 ![example-flickering-sprite-with-transparency](https://github.com/user-attachments/assets/877b3e0d-7475-49df-998a-7e3e4b999a98)
 
 
-__5: Toggle for visuals and other things__
+__5: Переключатель для визуальных и прочих штучек__
 
 ![example-toggle-for-visuals](https://github.com/user-attachments/assets/1e7e0643-c871-41c4-bebb-22b34fa3601e)
 
 
-## Write Your Own Delegate Script
+## Напишите свой скрипт-делегат
 
-> When creating a game, you may need delegate scripts that allow you to interact with the interface of your systems via `UnityEvent`(-s). Although most likely, you could come up with a general-purpose script that is not related to any systems, or you wanted to make a script that allows you to invoke some algorithm via `UnityEvent` that interacts with existing components from official Unity packages.
+> При создании игры, могут понадобиться скрипты-делегаты которые позволяют взаимодействовать с интерфейсом ваших систем через `UnityEvent`(-ы). Однако, скорее всего, вы могли придумать скрипт общего назначения который не связан ни с какой системой, или вы хотели сделать скрипт который позволяет вызвать исполнение некоторого алгоритма через `UnityEvent` который взаимодействует с существующими компонентами из официальных пакетов Unity.
 
-Either way, here are some useful tips for you:
+В любом случае, вот пара полезных советов:
 
-__1) All public serializable fields must be auto-properties so that they can be accessed and assigned ​​via `UnityEvent`(-s).__
+__1) Все публичные сериализуемые поля должны быть в виде авто-свойств, чтобы к ним можно было обратиться через `UnityEvent`(-ы).__
 ```cs
 [field: SerializeField] public float Speed { get; set; } = 1f;
 ```
-__2) If the `class` is not `abstract`, it should be `sealed`!__
+__2) Если класс (`class`) не является абстрактным (`abstract`), он должен быть запечатан (`sealed`)!__
 
-> ⚠️ In the Unity ecosystem, existing scripts are difficult to rewrite without losing data and method/field references. Don't create inheritance trees where you can safely do without them, even if it requires some code repetition.
+> ⚠️ В экосистеме Unity, существующие скрипты трудно поддаются переписыванию без потери данных и ссылок на методы/поля. Не создавайте лишние деревья наследования там, где можно спокойно обойтись без них, даже если это требует дублирования некоторых фрагментов кода.
 
-__3) If you use a custom package that provides serializable callbacks in Unity (similar to `System.Func<T>`, but with the ability to specify the property/method via the inspector), then you have a great opportunity to separate out pieces of code that might return a value, especially a `bool`.__
+__3) Если вы используете кастомный пакет который предоставляет сериализуемые калбеки в Unity (схожие с `System.Func<T>`, но с возможностью указать свойство/метод через инспектор), тогда есть отличная возможность отделить фрагменты кода которые могут вернуть в дальнейшем используемое значение, например, `bool`.__
 ```cs
 [Serializable]
 public sealed class BoolCallback : SerializableCallback<bool> { }
