@@ -6,7 +6,7 @@
     "url": "https://github.com/Demexis"
   },
   "displayName": "Unity Delegates",
-  "description": "UnityEvent-driven architecture implemented through small and simple mono-components.",
+  "description": "UnityEvent-Driven architecture implemented through small and simple mono-behaviour components.",
   "unity": "2021.3",
   "version": "1.0.0",
   "repository": {
