@@ -10,12 +10,12 @@
   <tr></tr>
   <tr>
     <td nowrap width="100">
-      <a href="https://github.com/Demexis/Unity-Buffs">
+      <a href="https://github.com/Demexis/Unity-Delegates">
         <span>English</span>
       </a>  
     </td>
     <td nowrap width="100">
-      <a href="https://github.com/Demexis/Unity-Buffs/blob/main/README-RU.md">
+      <a href="https://github.com/Demexis/Unity-Delegates/blob/main/README-RU.md">
         <span>Русский</span>
       </a>  
     </td>
