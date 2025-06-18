@@ -80,12 +80,12 @@ __2) Add the necessary components to the game object to execute your game logic,
 __3) For more complex logic using conditions (if-else), you may need to integrate a custom repository with serializable callbacks, for example, this one: https://github.com/Siccity/SerializableCallback.git__
 
 ## Examples
-__1: Make the sprite used only for work in the editor - invisible in the play mode.__
+__1: Make the sprite used only for work in the editor - invisible in the play mode__
 
 ![example-disable-sprite-on-awake](https://github.com/user-attachments/assets/5d31c140-92eb-487b-ab2d-a8fa2470bc2e)
 
 
-__2: Spawn a reward with some chance when the object dies.__
+__2: Spawn a reward with some chance when the object dies__
 
 ![example-spawn-reward-on-destroy](https://github.com/user-attachments/assets/142f5ffa-90c6-4189-993e-3188cc0f6ec0)
 
@@ -93,11 +93,57 @@ __2: Spawn a reward with some chance when the object dies.__
 * ⚠️ `MonoBehaviour.OnDestroy()` is not always guaranteed to be called, and is used in this example to simplify the idea. Remember that `OnDestroy` is also called when changing a scene, exiting a play mode, or removing script in the editor. Usually each project has its own system of spawning/despawning game objects, and in this case, you could write your own delegate script to avoid the shortcomings of `OnDestroy`.
 
 
-__3: A button that plays a sound and redirects to your social networks when clicked.__
+__3: A button that plays a sound and redirects to your social networks when clicked__
 
 ![example-play-audio-and-open-link-on-button-click](https://github.com/user-attachments/assets/0be44fdc-b008-4e82-9d3c-fb01c20daae2)
 
 * ⚠️ `InstantiateSound` is just an example of a simple script for playing an `AudioClip` asset (not included in this package). You can write delegate script for your own audio manager or something similar.
 
 
-## Hints
+__4: Flickering sprite with transparency__
+
+![example-flickering-sprite-with-transparency](https://github.com/user-attachments/assets/877b3e0d-7475-49df-998a-7e3e4b999a98)
+
+
+__5: Toggle for visuals and other things__
+
+![example-toggle-for-visuals](https://github.com/user-attachments/assets/1e7e0643-c871-41c4-bebb-22b34fa3601e)
+
+
+## Write Your Own Delegate Script
+
+> When creating a game, you may need delegate scripts that allow you to interact with the interface of your systems via `UnityEvent`(-s). Although most likely, you could come up with a general-purpose script that is not related to any systems, or you wanted to make a script that allows you to invoke some algorithm via `UnityEvent` that interacts with existing components from official Unity packages.
+
+Either way, here are some useful tips for you:
+
+__1) All public serializable fields must be auto-properties so that they can be accessed and assigned ​​via `UnityEvent`(-s).__
+```cs
+[field: SerializeField] public float Speed { get; set; } = 1f;
+```
+__2) If the `class` is not `abstract`, it should be `sealed`!__
+
+> ⚠️ In the Unity ecosystem, existing scripts are difficult to rewrite without losing data and method/field references. Don't create inheritance trees where you can safely do without them, even if it requires some code repetition.
+
+__3) If you use a custom package that provides serializable callbacks in Unity (similar to `System.Func<T>`, but with the ability to specify the property/method via the inspector), then you have a great opportunity to separate out pieces of code that might return a value, especially a `bool`.__
+```cs
+[Serializable]
+public sealed class BoolCallback : SerializableCallback<bool> { }
+
+public sealed class FuncBoolDelegate : MonoBehaviour {
+    [field: SerializeField] public BoolCallback Callback { get; set; } = new();
+    [field: SerializeField] public UnityEvent<bool> OnTrigger { get; set; } = new();
+    [field: SerializeField] public UnityEvent OnTriggerTrue { get; set; } = new();
+    [field: SerializeField] public UnityEvent OnTriggerFalse { get; set; } = new();
+    
+    public void Trigger() {
+        var triggerResult = Callback.Invoke();
+        
+        OnTrigger.Invoke(triggerResult);
+        
+        if (triggerResult) {
+            OnTriggerTrue.Invoke();
+        } else {
+            OnTriggerFalse.Invoke();
+        }
+    }
+```
