@@ -5,60 +5,58 @@
 <table>
   <tr></tr>
   <tr>
-    <td colspan="3">Readme Languages:</td>
+    <td colspan="3">Языки Readme:</td>
   </tr>
   <tr></tr>
   <tr>
     <td nowrap width="100">
-      <a href="https://github.com/Demexis/Unity-Delegates">
+      <a href="https://github.com/Demexis/Unity-Buffs">
         <span>English</span>
       </a>  
     </td>
     <td nowrap width="100">
-      <a href="https://github.com/Demexis/Unity-Delegates/blob/main/README-RU.md">
+      <a href="https://github.com/Demexis/Unity-Buffs/blob/main/README-RU.md">
         <span>Русский</span>
       </a>  
     </td>
   </tr>
 </table>
 
-This package is a starting point for demonstrating how you can use general purpose `MonoBehaviour` components that use `UnityEvent`(-s) so that you don't have to write separate scripts to perform simple and primitive actions.
+Данный пакет является отправной демонстрацией того, как вы можете использовать `MonoBehaviour` компоненты общего назначения использующие `UnityEvent`-ы для того, чтобы вам не приходилось писать отдельные скрипты для выполнения простецких и примитивных действий.
 
-> Have you ever written scripts like: `DisableSpriteRendererOnAwake.cs`, `SetRawImageColorAlphaWithDelay.cs`? These scripts maybe were used only once in the main menu or somewhere else, but they are still in the project and make code navigation and searching more difficult as their number increases. Previously mentioned scripts work with specific types, and if you need to apply similar logic, for example, not only to sprites, but also to lines, other renderers, or your custom scripts, the number of such scripts will increase, given that it is not always possible to simply specify a base class so that the logic works for all types you work with.
+> Вы когда-нибудь писали скрипты, типа: `DisableSpriteRendererOnAwake.cs`, `SetRawImageColorAlphaWithDelay.cs`? Эти скрипты вполне возможно используются всего лишь один раз в главном меню или где-то ещё, но они всё равно находятся в проекте и усложняют навигацию и поиск в IDE при увеличении их кол-ва. Ранее упомянутые скрипты работают с конкретными типами, и если нужно применить схожую логику, скажем, не только со спрайтами, но также с линиями, другими рендерами, или вашими кастомными скриптами, кол-во подобных скриптов увеличится, учитывая, что не всегда есть возможность просто указать базовый класс для того, чтобы логика срабатывала для всех типов с которыми вы работаете.
 >
-> I am not an adherent of DRY (Don't Repeat Yourself), and I am not saying that there must be no repeating code in the project, on the contrary, it is ok. But in many cases you can avoid the accumulation of unnecessary garbage scripts by using `UnityEvent`(-s), to which you can subscribe most of what you may need.
+> Я не адепт прицнипа DRY (Don't Repeat Yourself), и я не говорю, что в проекте не должно быть повторяющегося кода, напротив, это нормально. Но во многих случаях можно избежать накопления лишних мусорных скриптов, используя `UnityEvent`(-ы), к которым можно подписать большую часть того, что вам может понадобиться.
 >
-> I also hope that, just as with any other programming principles and patterns, you won't blindly attach a given architectural paradigm to everything, but will be able to recognize where it is truly convenient, easy, and appropriate, and where it is worth applying old or other approaches for the sake of optimization or debugging.
+> Я также надеюсь, что как и с любыми другими принципами и шаблонами в программировании, вы не будете слепо навешивать данную архитектурную парадигму на всё, а сможете осознать, где это удобно, легко, и уместно, а где стоит применить старый или другие подходы в угоду оптимизации или отладки.
 
-## Table of Contents
-- [Setup](#setup)
-- [Usage](#usage)
-- [Examples](#examples)
-- [Write Your Own Delegate Script](#write-your-own-delegate-script)
+## Содержание
+- [Настройка](#setup)
+- [Использование](#usage)
+- [Примеры](#examples)
+- [Напишите Свой Скрипт-Делегат](#write-your-own-delegate-script)
 
 <br>
 
-## Setup
+## Настройка
 
-### Requirements
+### Требования
 
-* Unity 2021.3 or later
+* Unity 2021.3 или позднее
 
-### Installation
+### Установка
 
-> ⚠️ After installation, you may need to restart your project so that you can use `MonoBehaviour` components from this package in the inspector.
+Используйте __ОДИН__ из двух вариантов:
 
-Use __ONE__ of two options:
-
-#### a) Package Manager (Recommended)
-1. Open Package Manager from Window > Package Manager.
-2. Click the "+" button > Add package from git URL.
-3. Enter the following URL:
+#### а) Менеджер пакетов (Рекомендуется)
+1. Откройте Package Manager из Window > Package Manager.
+2. Нажмите на кнопку "+" > Add package from git URL.
+3. Введите в поле этот URL:
 ```
 https://github.com/Demexis/Unity-Delegates.git
 ```
 
-Alternatively, open *Packages/manifest.json* and add the following to the dependencies block:
+Альтернативно, можете открыть *Packages/manifest.json* и добавить туда новую строку в блок "dependencies":
 
 ```json
 {
@@ -68,19 +66,19 @@ Alternatively, open *Packages/manifest.json* and add the following to the depend
 }
 ```
 
-#### b) Unity Package
-Download a unity package from [the latest release](../../releases).
+#### б) Юнити-пакет
+Скачайте юнити-пакет из [последнего релиза](../../releases).
 
-## Usage
+## Использование
 
-__1) Check out the list of existing components with a detailed description on the wiki.__
+__1) Ознакомьтесь со списком уже существующих компонентов с подробным описании на wiki.__
 
-__2) Add the necessary components to the game object to execute your game logic, link them together via UnityEvent(-s) if needed.__
+__2) Добавьте на игровой объект необходимые компоненты для исполнения вашей игровой логике, свяжите их между собой через UntiyEvent(-ы), если нужно.__
 
-__3) For more complex logic using conditions (if-else), you may need to integrate a custom repository with serializable callbacks, for example, this one: https://github.com/Siccity/SerializableCallback.git__
+__3) Для более сложной логики с использованием условий (if-else), может потребоваться интегрировать кастомный репозиторий с сериализуемыми калбеками, например, вот этот: https://github.com/Siccity/SerializableCallback.git__
 
-## Examples
-__1: Make the sprite used only for work in the editor - invisible in the play mode__
+## Примеры
+__1:  Make the sprite used only for work in the editor - invisible in the play mode__
 
 ![example-disable-sprite-on-awake](https://github.com/user-attachments/assets/5d31c140-92eb-487b-ab2d-a8fa2470bc2e)
 
