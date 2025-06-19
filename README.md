@@ -50,7 +50,10 @@ This package is a starting point for demonstrating how you can use general purpo
 
 Use __ONE__ of two options:
 
-#### a) Package Manager (Recommended)
+#### a) Unity Package (Recommended)
+Download a unity package from [the latest release](../../releases).
+
+#### b) Package Manager
 1. Open Package Manager from Window > Package Manager.
 2. Click the "+" button > Add package from git URL.
 3. Enter the following URL:
@@ -67,9 +70,6 @@ Alternatively, open *Packages/manifest.json* and add the following to the depend
     }
 }
 ```
-
-#### b) Unity Package
-Download a unity package from [the latest release](../../releases).
 
 ## Usage
 
