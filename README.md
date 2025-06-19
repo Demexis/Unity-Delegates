@@ -73,7 +73,7 @@ Alternatively, open *Packages/manifest.json* and add the following to the depend
 
 ## Usage
 
-__1) Check out the list of existing components with a detailed description on the [Wiki](../../wiki).__
+__1) Check out the list of existing components with a description on the [Wiki](../../wiki).__
 
 __2) Add the necessary components to the game object to execute your game logic, link them together via UnityEvent(-s) if needed.__
 
