@@ -15,15 +15,20 @@ namespace Demegraunt.Framework {
 
         [UsedImplicitly]
         public void Trigger() {
+            Trigger(Text);
+        }
+
+        [UsedImplicitly]
+        public void Trigger(string text) {
             switch (LogType) {
                 case DebugLogType.Log:
-                    Debug.Log(Text, gameObject);
+                    Debug.Log(text, gameObject);
                     break;
                 case DebugLogType.Warning:
-                    Debug.LogWarning(Text, gameObject);
+                    Debug.LogWarning(text, gameObject);
                     break;
                 case DebugLogType.Error:
-                    Debug.LogError(Text, gameObject);
+                    Debug.LogError(text, gameObject);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

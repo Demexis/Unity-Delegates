@@ -11,8 +11,8 @@ namespace Demegraunt.Framework {
         [field: SerializeField] public float EvaluatedValueScale { get; set; } = 1f;
 
         [field: SerializeField] public UnityEvent<float> OnCurveEvaluated { get; set; } = new();
-        
-        public float CurveTimer { get; set; } 
+
+        public float CurveTimer { get; set; }
 
         public void Play() {
             IsPlaying = true;
@@ -23,12 +23,11 @@ namespace Demegraunt.Framework {
             CurveTimer = 0f;
         }
 
-        public void Restart()
-        {
+        public void Restart() {
             Stop();
             Play();
         }
-        
+
         private void Update() {
             if (!IsPlaying) {
                 return;
@@ -39,16 +38,16 @@ namespace Demegraunt.Framework {
                     Stop();
                     return;
                 }
-                
+
                 CurveTimer -= CurveTime;
             }
-            
+
             CurveTimer += Time.deltaTime;
 
             var time = Mathf.Clamp(CurveTimer / CurveTime, 0f, AnimationCurve[AnimationCurve.length - 1].time);
 
             var evaluated = AnimationCurve.Evaluate(time) * EvaluatedValueScale;
-            
+
             OnCurveEvaluated.Invoke(evaluated);
         }
     }
