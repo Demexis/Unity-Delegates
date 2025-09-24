@@ -2,7 +2,7 @@
 using UnityEngine;
 
 namespace Demegraunt.Framework {
-    public static class ColorExtensions {
+    internal static class ColorExtensions {
         [Pure]
         public static Color SetR(this Color color, float r) {
             return new Color(r, color.g, color.b, color.a);
