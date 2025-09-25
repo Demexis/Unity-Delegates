@@ -24,6 +24,14 @@ namespace Demegraunt.Framework {
             BoolValue = !BoolValue;
         }
 
+        public void SetAndTriggerIfDifferent(bool value) {
+            if (BoolValue == value) {
+                return;
+            }
+            
+            SetAndTrigger(value);
+        }
+        
         public void SetAndTrigger(bool value) {
             BoolValue = value;
             Trigger(value);
