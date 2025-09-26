@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b0b78818-f15a-41ee-a749-56e9d0581f5e" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Demexis&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Demexis/Unity-Delegates&quot;,
+    &quot;accountId&quot;: &quot;309fb87d-adde-4767-b7ff-a10caf2db1d5&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://D:/RiderProjects/UnityDelegates/Runtime.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Runtime/ApplicationDelegates/OpenUrlDelegate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Runtime/Extensions/ColorExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Runtime/LogicDelegates/ActionDelegate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Runtime/LogicDelegates/AnimationCurvePlayerDelegate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Runtime/LogicDelegates/DelayedActionDelegate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Runtime/LogicDelegates/RandomActionDelegate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Runtime/LogicDelegates/RemainderDelegate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Runtime/MonoBehaviourDelegates/Mouse/OnMouseDownDelegate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Runtime/PrimitiveDelegates/BoolDelegate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/RiderProjects/UnityDelegates/Runtime/PrimitiveDelegates/BoolDelegate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/RiderProjects/UnityDelegates/Runtime/UnityDelegates.asmdef" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/RiderProjects/UnityDelegates/Runtime/UnityDelegates.asmdef.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Runtime/ValueTypeDelegates/ColorDelegate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/RiderProjects/UnityDelegates/package.json.meta" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2ybM6FAJVKB1qiqypORfHN83Wmg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0b78818-f15a-41ee-a749-56e9d0581f5e" name="Changes" comment="" />
+      <created>1750098642328</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750098642328</updated>
+      <workItem from="1750098643656" duration="7000" />
+      <workItem from="1750098674602" duration="2714000" />
+      <workItem from="1750250900980" duration="7675000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: added new component - &quot;OpenUrlDelegate&quot;.">
+      <option name="closed" value="true" />
+      <created>1750098803253</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750098803253</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: added new component - &quot;BoolDelegate&quot;.">
+      <option name="closed" value="true" />
+      <created>1750100434255</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750100434255</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: added new component - &quot;OnDestroyDelegate&quot;. Renamed &quot;EnableDisableDelegate&quot; to &quot;OnEnableDisableDelegate&quot;.">
+      <option name="closed" value="true" />
+      <created>1750100894133</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750100894133</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: added new components - &quot;OnMouseDownDelegate&quot;, &quot;OnMouseDragDelegate&quot;, &quot;OnMouseEnterDelegate&quot;, &quot;OnMouseExitDelegate&quot;, &quot;OnMouseOverDelegate&quot;, &quot;OnMouseUpDelegate&quot;.">
+      <option name="closed" value="true" />
+      <created>1750101778168</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750101778168</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: added new component - &quot;ColorDelegate&quot;.">
+      <option name="closed" value="true" />
+      <created>1750251054045</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750251054045</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: added new component - &quot;ActionDelegate&quot;.">
+      <option name="closed" value="true" />
+      <created>1750251084601</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1750251084601</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: added new component - &quot;DelayedActionDelegate&quot;.">
+      <option name="closed" value="true" />
+      <created>1750251112818</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1750251112818</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: added new component - &quot;RandomActionDelegate&quot;.">
+      <option name="closed" value="true" />
+      <created>1750251135369</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1750251135369</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: added new component - &quot;RemainderDelegate&quot;.">
+      <option name="closed" value="true" />
+      <created>1750253194393</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1750253194393</updated>
+    </task>
+    <task id="LOCAL-00010" summary="chore: changed package description.">
+      <option name="closed" value="true" />
+      <created>1750253537429</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1750253537429</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: added new component - &quot;AnimationCurvePlayerDelegate&quot;.">
+      <option name="closed" value="true" />
+      <created>1750270581739</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1750270581739</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix: fixed AnimationCurvePlayerDelegate not resetting timer on one-shot playback end.">
+      <option name="closed" value="true" />
+      <created>1750271834935</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1750271834935</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: added &quot;Restart&quot; method to AnimationCurvePlayerDelegate.">
+      <option name="closed" value="true" />
+      <created>1750271958832</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1750271958832</updated>
+    </task>
+    <task id="LOCAL-00014" summary="api: renamed methods in BoolDelegate.">
+      <option name="closed" value="true" />
+      <created>1750274333746</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1750274333746</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix: prevent unity console errors by adding missing metafiles.">
+      <option name="closed" value="true" />
+      <created>1750280765209</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1750280765209</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix: fixed github being stupid that thinks the LICENSE.meta was a second unknown license.">
+      <option name="closed" value="true" />
+      <created>1750288646561</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1750288646561</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="feat: added new component - &quot;OpenUrlDelegate&quot;." />
+    <MESSAGE value="feat: added new component - &quot;BoolDelegate&quot;." />
+    <MESSAGE value="feat: added new component - &quot;OnDestroyDelegate&quot;. Renamed &quot;EnableDisableDelegate&quot; to &quot;OnEnableDisableDelegate&quot;." />
+    <MESSAGE value="feat: added new components - &quot;OnMouseDownDelegate&quot;, &quot;OnMouseDragDelegate&quot;, &quot;OnMouseEnterDelegate&quot;, &quot;OnMouseExitDelegate&quot;, &quot;OnMouseOverDelegate&quot;, &quot;OnMouseUpDelegate&quot;." />
+    <MESSAGE value="feat: added new component - &quot;ColorDelegate&quot;." />
+    <MESSAGE value="feat: added new component - &quot;ActionDelegate&quot;." />
+    <MESSAGE value="feat: added new component - &quot;DelayedActionDelegate&quot;." />
+    <MESSAGE value="feat: added new component - &quot;RandomActionDelegate&quot;." />
+    <MESSAGE value="feat: added new component - &quot;RemainderDelegate&quot;." />
+    <MESSAGE value="chore: changed package description." />
+    <MESSAGE value="feat: added new component - &quot;AnimationCurvePlayerDelegate&quot;." />
+    <MESSAGE value="fix: fixed AnimationCurvePlayerDelegate not resetting timer on one-shot playback end." />
+    <MESSAGE value="feat: added &quot;Restart&quot; method to AnimationCurvePlayerDelegate." />
+    <MESSAGE value="api: renamed methods in BoolDelegate." />
+    <MESSAGE value="fix: prevent unity console errors by adding missing metafiles." />
+    <MESSAGE value="fix: fixed github being stupid that thinks the LICENSE.meta was a second unknown license." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fixed github being stupid that thinks the LICENSE.meta was a second unknown license." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
