@@ -8,7 +8,7 @@
   "displayName": "Unity Delegates",
   "description": "UnityEvent-Driven architecture implemented through small and simple mono-behaviour components.",
   "unity": "2021.3",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/Demexis/Unity-Delegates.git"
