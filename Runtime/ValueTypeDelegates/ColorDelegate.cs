@@ -50,6 +50,10 @@ namespace Demegraunt.Framework {
             Color = Color.MultiplyA(a);
         }
 
+        public void Multiply(Color color) {
+            Color *= color;
+        }
+
         public void Trigger() {
             Trigger(Color);
         }
